@@ -1,7 +1,7 @@
-# 🗺️ ThreatMapper
+# 🗺️ OsintKitPlus
 
 **Unified OSINT Intelligence Engine**  
-Point it at any IP or domain — ThreatMapper pulls data from NVD, Shodan, VirusTotal, and public DNS/GeoIP APIs and merges everything into a single structured report.
+Point it at any IP or domain — OsintKitPlus pulls data from NVD, Shodan, VirusTotal, and public DNS/GeoIP APIs and merges everything into a single structured report.
 
 > ⚠️ For educational and authorized research use only.
 
@@ -11,7 +11,7 @@ Point it at any IP or domain — ThreatMapper pulls data from NVD, Shodan, Virus
 
 ```
   ╔════════════════════════════════════════════════════════╗
-  ║  THREATMAPPER INTELLIGENCE REPORT                      ║
+  ║  OsintKitPlus INTELLIGENCE REPORT                      ║
   ║  Target : example.com                                  ║
   ║  Time   : 2025-01-01T12:00:00Z                        ║
   ╠════════════════════════════════════════════════════════╣
@@ -52,8 +52,8 @@ Point it at any IP or domain — ThreatMapper pulls data from NVD, Shodan, Virus
 ## 🚀 Installation
 
 ```bash
-git clone https://github.com/ozancolhak/ThreatMapper
-cd ThreatMapper
+git clone https://github.com/ozancolhak/OsintKitPlus
+cd OsintKitPlus
 pip install -r requirements.txt
 
 # Recommended extras
@@ -70,25 +70,25 @@ pip install python-whois dnspython
 
 ```bash
 # Basic scan — no API keys needed (GeoIP + DNS + NVD)
-python3 threatmapper.py example.com
-python3 threatmapper.py 8.8.8.8
+python3 OsintKitPlus.py example.com
+python3 OsintKitPlus.py 8.8.8.8
 
 # Full scan with all sources
-python3 threatmapper.py example.com \
+python3 OsintKitPlus.py example.com \
     --shodan-key YOUR_SHODAN_KEY \
     --vt-key YOUR_VT_KEY
 
 # Custom CVE keyword search
-python3 threatmapper.py example.com --cve apache nginx openssl
+python3 OsintKitPlus.py example.com --cve apache nginx openssl
 
 # Save JSON report
-python3 threatmapper.py example.com --output report.json
+python3 OsintKitPlus.py example.com --output report.json
 
 # Run specific modules only
-python3 threatmapper.py example.com --only geo dns virustotal
+python3 OsintKitPlus.py example.com --only geo dns virustotal
 
 # Skip slow modules
-python3 threatmapper.py example.com --skip shodan cve
+python3 OsintKitPlus.py example.com --skip shodan cve
 ```
 
 ---
@@ -147,8 +147,8 @@ python3 threatmapper.py example.com --skip shodan cve
 ## 🏗️ Project Structure
 
 ```
-ThreatMapper/
-├── threatmapper.py           # Main CLI
+OsintKitPlus/
+├── OsintKitPlus.py           # Main CLI
 ├── requirements.txt
 ├── modules/
 │   ├── geo.py                # GeoIP + WHOIS
