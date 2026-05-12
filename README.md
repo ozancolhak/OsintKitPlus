@@ -2,7 +2,12 @@
 
 **Unified OSINT Intelligence Engine**  
 Point it at any IP or domain — OsintKitPlus pulls data from NVD, Shodan, VirusTotal, and public DNS/GeoIP APIs and merges everything into a single structured report.
+**OsintKitPlus** is Phase 2 of our intelligence pipeline, focused on **deep vulnerability and threat analysis** (CVEs, Open Ports, Malware Reputation).
 
+Before scanning a target for vulnerabilities, you need to know what assets exist. Use our companion tool **[OsintKit](https://github.com/ozancolhak/OsintKit)** for Phase 1: Attack Surface Discovery to map out hidden subdomains, GitHub leaks, and old endpoints.
+
+*   **Phase 1:** Map the target with `OsintKit` (Find subdomains, emails, domains).
+*   **Phase 2:** Scan those discovered assets with `OsintKitPlus` (Find C
 > ⚠️ For educational and authorized research use only.
 
 ---
